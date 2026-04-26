@@ -1,0 +1,104 @@
+# Cooking Recipe Assistant
+
+This project is a simple AI-based web application that suggests recipes based on the ingredients given by the user. It also provides cooking steps and a short explanation for the recommendation.
+
+---
+
+## Features
+
+* Search recipes using available ingredients
+* Shows best matching recipes with a score
+* Displays ingredients and cooking steps
+* Highlights missing ingredients
+* Provides AI-generated explanation for the best recipe
+
+---
+
+## Tech Stack
+
+Frontend:
+
+* React
+* Axios
+
+Backend:
+
+* FastAPI
+* Python
+* scikit-learn (TF-IDF)
+* Pandas
+
+AI:
+
+* LLM (Groq / OpenAI compatible API)
+
+---
+
+## Project Structure
+
+ai-mini-project/
+│
+├── backend/
+│   ├── app.py
+│   ├── recommend.py
+│   ├── preprocess.py
+│   ├── model.py
+│   ├── embed_store.py
+│   ├── utils.py
+│   └── llm.py
+│
+├── embeddings/
+│
+├──  data/
+│
+├── frontend/
+│   └── src/App.js
+
+---
+
+## How to Run
+
+### Backend
+
+cd backend
+pip install -r requirements.txt
+uvicorn app:app --reload
+
+Backend runs at:
+[http://127.0.0.1:8000](http://127.0.0.1:8000)
+
+---
+
+### Frontend
+
+cd frontend
+npm install
+npm start
+
+Frontend runs at:
+[http://localhost:3000](http://localhost:3000)
+
+---
+
+## Example
+
+Input:
+chicken, oil, salt
+
+Output:
+
+* Recommended recipe
+* Ingredients list
+* Steps to cook
+* Missing ingredients
+* AI explanation
+
+---
+
+## Notes
+
+* Uses TF-IDF for matching ingredients
+* Recipes are filtered and ranked based on similarity and ingredient overlap
+* LLM is used only for explanation and Best Recipe Explanation
+
+

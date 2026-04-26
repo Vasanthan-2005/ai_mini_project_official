@@ -1,0 +1,24 @@
+# Python
+
+**pycache**/
+*.pyc
+venv/
+.env
+
+# Data / models
+
+*.pkl
+embeddings/
+
+# Frontend
+
+node_modules/
+build/
+
+# System files
+
+.DS_Store
+Thumbs.db
+
+data/
+*.csv
